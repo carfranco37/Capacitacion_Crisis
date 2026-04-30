@@ -105,7 +105,10 @@ tw-link:hover {
   padding: 10px 16px;
   border-radius: 6px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Escenario inicial" tags="" position="700,300" size="100,100">&lt;div class=&quot;titulo&quot;&gt;Escenario Inicial&lt;/div&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Escenario inicial" tags="" position="700,300" size="100,100">(set: $esc to &quot;NA&quot;)
+(set: $act to &quot;NA&quot;)
+(set: $tim to &quot;NA&quot;)
+&lt;div class=&quot;titulo&quot;&gt;Escenario Inicial&lt;/div&gt;
 
 &lt;span class=&quot;hora&quot;&gt;11:00 – Casa Central&lt;/span&gt;
 
@@ -125,7 +128,9 @@ Si las operaciones no se restablecen antes de ese plazo, podrían verse afectada
 &lt;/div&gt;
 [[Esperar]]
 [[Escalar la situación y evaluar la activación del Plan de Continuidad]]
-</tw-passagedata><tw-passagedata pid="2" name="Esperar" tags="" position="700,525" size="100,100">&lt;span class=&quot;hora&quot;&gt;11:30&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="2" name="Esperar" tags="" position="700,525" size="100,100">(set: $esc to &quot;ESP&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;11:30&lt;/span&gt;
 La interrupción continúa y aún no hay estimación de resolución.
 
 Las operatorias de mercado se encuentran detenidas por mas de una hora y los equipos relacionados están al aguardo que los equipos técnicos indiquen como y cuando proceder. 
@@ -135,6 +140,7 @@ Las operatorias de mercado se encuentran detenidas por mas de una hora y los equ
 Administración, luego de ponerse en contacto con la empresa proveedora de suministro eléctrico, informa que la disrupción durará al menos &#39;&#39;dos horas mas&#39;&#39;. 
 &lt;div class=&quot;pregunta&quot;&gt;
 Ante esta situación, ¿Cómo continuamos?&lt;/div&gt;
+
 [[Esperamos Definición de Alta Gerencia]]
 [[Activamos el Plan de Continuidad]]
 
@@ -144,7 +150,9 @@ Ante esta situación, ¿Cómo continuamos?&lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Escalar la situación y evaluar la activación del Plan de Continuidad" tags="" position="950,375" size="100,100">&lt;span class=&quot;hora&quot;&gt;11:00&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Escalar la situación y evaluar la activación del Plan de Continuidad" tags="" position="950,375" size="100,100">(set: $esc to &quot;ESC&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;11:00&lt;/span&gt;
 
 Los equipos de Mesa de Operaciones elevan rápidamente el incidente e informan la alternativa contemplada dentro del plan de continuidad del Negocio.
 
@@ -152,7 +160,9 @@ Los equipos de Mesa de Operaciones elevan rápidamente el incidente e informan l
 Ante esta situación, se plantean dos alternativas:&lt;/div&gt;
 [[Esperar Activación de Comité de Crisis]]
 [[Activar  el Plan]]
-</tw-passagedata><tw-passagedata pid="4" name="Esperamos Definición de Alta Gerencia" tags="" position="575,725" size="100,100">&lt;span class=&quot;hora&quot;&gt;12:00&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Esperamos Definición de Alta Gerencia" tags="" position="575,725" size="100,100">(set: $act to &quot;ESP&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;12:00&lt;/span&gt;
 
 Desde Alta Gerencia se indica a los colaboradores de BNA retornar a sus respectivos domicilios y continuar con la operatoria en caso de ser posible.
 
@@ -171,13 +181,19 @@ de Mesa de Operaciones.
 El Plan de Continuidad debería haberse activado antes para iniciar 
 las estrategias de recuperación dentro del tiempo previsto.
 
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Código:&lt;/strong&gt; (print: (str: $esc) + &quot;-&quot; + (str: $act) + &quot;-&quot; + (str: $dec))
+&lt;br&gt;&lt;br&gt;
+
 &lt;div class=&quot;reintentar&quot;&gt;
 
 [[Rehacer el Ejercicio-&gt;Escenario inicial]]
 
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Activamos el Plan de Continuidad" tags="" position="850,750" size="100,100">&lt;span class=&quot;hora&quot;&gt;11:45&lt;/span&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Activamos el Plan de Continuidad" tags="" position="850,750" size="100,100">(set: $act to &quot;ACT&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;11:45&lt;/span&gt;
 
 Los equipos de Mesa de Operaciones activan su Plan de Continuidad luego conocer que la indisponibilidad continuará por encima del tiempo objetivo de recuperación.
 
@@ -193,13 +209,19 @@ Esperar la resolución del incidente sin activar el Plan de Continuidad incremen
 
 En este caso se cumplió el tiempo objetivo, pero debido a su activación tadía, se aumentaron considerablemente los riesgos vinculados. Además. la falta de comunicación y elevación activa podría ocasionar inconvenientes en al articulación del plan.
 
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Código:&lt;/strong&gt; (print: (str: $esc) + &quot;-&quot; + (str: $act) + &quot;-&quot; + (str: $dec))
+&lt;br&gt;&lt;br&gt;
+
 &lt;div class=&quot;reintentar&quot;&gt;
 
 [[Rehacer el Ejercicio-&gt;Escenario inicial]]
 
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Esperar Activación de Comité de Crisis" tags="" position="1200,575" size="100,100">&lt;span class=&quot;hora&quot;&gt;11:30&lt;/span&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Esperar Activación de Comité de Crisis" tags="" position="1200,575" size="100,100">(set: $dec to &quot;COM&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;11:30&lt;/span&gt;
 
 Se realiza el comité de Crisis y Continuidad del Negocio, en el cual se determina entre otros asuntos, la activación del Plan para Mesa de Operaciones.
 
@@ -217,7 +239,13 @@ Si bien se activó el plan a tiempo, la espera de resolución del Comité, incre
 &lt;strong&gt;Lección clave:&lt;/strong&gt; activar tempranamente el Plan permite
 iniciar antes las estrategias de recuperación.
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Activar  el Plan" tags="" position="1300,375" size="100,100">&lt;span class=&quot;hora&quot;&gt;11:15&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Código:&lt;/strong&gt; (print: (str: $esc) + &quot;-&quot; + (str: $act) + &quot;-&quot; + (str: $dec))
+&lt;br&gt;&lt;br&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Activar  el Plan" tags="" position="1300,375" size="100,100">(set: $dec to &quot;DIR&quot;)
+
+&lt;span class=&quot;hora&quot;&gt;11:15&lt;/span&gt;
 
 Habiéndose elevado a instancias de la primera línea de reporte del Gerente General, y luego de analizar el escenario, el responsable del plan activa el Plan de Continudiad y comunica a las partes.
 
@@ -235,6 +263,11 @@ Los equipos de Mesa de Operaciones se encuentran próximos a operar a un nivel m
 La activación temprana del Plan de Continuidad permitió iniciar rápidamente la estrategia de trabajo remoto, reduciendo el impacto sobre las operatorias críticas del banco.
 
 Al haber activado el Plan de manera proactiva, se mitigan los riesgos asociados con la disrupción, reduciendo el impacto sufrido. Este camino de acción resulta el óptimo, ya que reuslta proactivo y mantiene una comunicación activa de lo realizado desde momento cero. 
+
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Código:&lt;/strong&gt; (print: (str: $esc) + &quot;-&quot; + (str: $act) + &quot;-&quot; + (str: $dec))
+&lt;br&gt;&lt;br&gt;
+
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
